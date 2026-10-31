@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: foodmatch_backend
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+      - GEMMA_MODEL_ID=${GEMMA_MODEL_ID:-}
+      - SNOWFLAKE_ACCOUNT=${SNOWFLAKE_ACCOUNT:-}
+      - SNOWFLAKE_USER=${SNOWFLAKE_USER:-}
+      - SNOWFLAKE_PASSWORD=${SNOWFLAKE_PASSWORD:-}
+      - SNOWFLAKE_WAREHOUSE=${SNOWFLAKE_WAREHOUSE:-COMPUTE_WH}
+      - SNOWFLAKE_DATABASE=${SNOWFLAKE_DATABASE:-}
+      - SNOWFLAKE_SCHEMA=${SNOWFLAKE_SCHEMA:-PUBLIC}
+      - SOLANA_RPC_URL=${SOLANA_RPC_URL:-https://api.devnet.solana.com}
+      - SOLANA_PRIVATE_KEY=${SOLANA_PRIVATE_KEY:-}
+      - SOLANA_REGISTRY_PROGRAM_ID=${SOLANA_REGISTRY_PROGRAM_ID:-}
+      - MATCH_WEIGHT_DEFICIT=${MATCH_WEIGHT_DEFICIT:-0.6}
+      - MATCH_WEIGHT_DISTANCE=${MATCH_WEIGHT_DISTANCE:-0.4}
+      - DATABASE_URL=sqlite:///./foodmatch.db
+    volumes:
+      - ./backend:/app
+      - backend_data:/app/data
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: foodmatch_frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  backend_data:
