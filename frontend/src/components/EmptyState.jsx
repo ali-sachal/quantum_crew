@@ -9,3 +9,4 @@ export default function EmptyState({ icon = '🌱', title = 'No data available',
     </div>
   );
 }
+

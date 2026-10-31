@@ -24,3 +24,4 @@ def get_matches_for_listing(listing_id: int, db: Session = Depends(get_db)):
         return []
 
     return matching_service.rank_stores_for_listing(listing, candidate_stores)
+

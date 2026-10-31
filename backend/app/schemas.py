@@ -74,3 +74,4 @@ class DealAcceptOut(BaseModel):
     final_price: float
     feedback_tx: str
     solana_explorer_url: str
+

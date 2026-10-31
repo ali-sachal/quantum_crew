@@ -59,3 +59,4 @@ export default function TrustBadge({ solanaAddress, txSignature, reputation = 4.
     </div>
   );
 }
+

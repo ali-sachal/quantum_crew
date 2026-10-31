@@ -27,3 +27,4 @@
 ## 2:40 - 3:00: Verifiable Solana Onchain Trust & Closing
 - **Visual:** Show the green **Deal Verified Onchain** banner and click **View on Solana Explorer**.
 - **Speaker:** "Upon acceptance, the deal receipt and a 5-star reputation score are cryptographically committed to the Solana Devnet Agent Registry via our isolated adapter module. Anyone can verify this transaction on Solana Explorer. FoodMatch eliminates food waste, turns bodegas into fresh produce hubs, and builds verifiable trust onchain. Thank you!"
+

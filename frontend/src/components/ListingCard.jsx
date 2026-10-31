@@ -105,3 +105,4 @@ export default function ListingCard({ listing, onBargain }) {
     </div>
   );
 }
+

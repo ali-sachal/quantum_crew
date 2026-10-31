@@ -38,3 +38,4 @@ def test_store_ranking_prioritizes_high_deficit_and_close_distance():
     # Store A must rank higher than Store B
     assert ranked[0]["store"].name == store_a.name
     assert ranked[0]["match_score"] > ranked[1]["match_score"]
+

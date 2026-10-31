@@ -55,3 +55,4 @@ ORDER BY
         WHEN 'Saturday' THEN 6
         WHEN 'Sunday' THEN 7
     END ASC;
+

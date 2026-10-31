@@ -71,3 +71,4 @@ def get_listing(listing_id: int, db: Session = Depends(get_db)):
     if not listing:
         raise HTTPException(status_code=404, detail="Listing not found")
     return listing
+

@@ -95,3 +95,4 @@ class SolanaRegistryAdapter:
             return {"success": False, "error": str(e), "reputation_score": 4.5}
 
 registry_adapter = SolanaRegistryAdapter()
+

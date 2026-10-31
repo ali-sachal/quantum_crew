@@ -15,3 +15,4 @@ During the data modeling phase with Snowflake CoCo (Cortex Copilot), the followi
 ## Output Metric
 The query produces a normalized **Deficit Score (0.0 to 10.0)** per day of week for any given ZIP code.
 In the South Bronx (e.g., 10451), Friday exhibits a peak deficit of **9.3**, as paychecks arrive and corner stores run out of fresh items before the weekend.
+

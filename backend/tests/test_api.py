@@ -52,3 +52,4 @@ def test_accept_deal_onchain():
     assert data["status"] == "accepted"
     assert "solana_explorer_url" in data
     assert "feedback_tx" in data
+

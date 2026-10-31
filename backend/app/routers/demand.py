@@ -11,3 +11,4 @@ def get_demand_deficit(zip: str = Query("10451", description="US 5-digit ZIP cod
     calculated via Snowflake consumer-spending & census data pipeline.
     """
     return demand_service.get_weekly_deficit(zip)
+

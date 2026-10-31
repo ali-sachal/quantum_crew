@@ -42,3 +42,4 @@ def health_check():
         "version": settings.VERSION,
         "api_docs": "/docs"
     }
+

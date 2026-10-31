@@ -64,3 +64,4 @@ INSERT INTO weekly_food_spending_patterns VALUES
 ('10455', 'Friday', 20.80, 0.90, 38, 0),
 ('10455', 'Saturday', 16.50, 1.80, 38, 0),
 ('10455', 'Sunday', 11.20, 1.20, 38, 0);
+

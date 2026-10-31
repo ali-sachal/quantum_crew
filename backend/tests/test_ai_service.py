@@ -53,3 +53,4 @@ def test_negotiation_guardrail_floor_price():
     reply = service.negotiate(history, floor_price, "Roma Tomatoes")
     # Reply must not accept $1.80 and must mention the floor price or counteroffer >= 2.50
     assert "$1.80" not in reply or "floor" in reply.lower() or "sustain" in reply.lower()
+

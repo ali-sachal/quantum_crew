@@ -92,3 +92,4 @@ def start_deal(listing_id: int, buyer_id: int, initial_offer: float, db: Session
     db.commit()
 
     return {"deal_id": deal.id, "status": deal.status}
+

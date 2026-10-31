@@ -88,3 +88,4 @@ class ChatMessage(Base):
     created_at = Column(DateTime, default=datetime.utcnow)
 
     deal = relationship("Deal", back_populates="messages")
+

@@ -17,3 +17,4 @@ export default function ErrorState({ error = 'Something went wrong', onRetry }) 
     </div>
   );
 }
+

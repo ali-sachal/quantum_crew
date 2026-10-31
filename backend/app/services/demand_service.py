@@ -117,3 +117,4 @@ class DemandService:
         return max(item["score"] for item in weekly) if weekly else 7.5
 
 demand_service = DemandService()
+

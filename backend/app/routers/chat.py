@@ -62,3 +62,4 @@ def send_chat_message(deal_id: int, payload: ChatSendRequest, db: Session = Depe
     db.refresh(seller_msg)
 
     return seller_msg
+
